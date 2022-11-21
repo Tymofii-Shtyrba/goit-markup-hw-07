@@ -1,0 +1,70 @@
+:root {
+  --main-color: #FFFFFF;
+  --second-color: #2F303A;
+  --team-section-color: #F5F4FA;
+  --first-logo-color: #2196F3;
+  --second-logo-color: #000000;
+  --main-text-color: #212121;
+  --descriprion-color: #757575;
+  --basement-contakts-color: #FFFFFF99;
+  --button-active-color: #188CE8;
+  --underline-color: #ECECEC;
+  --border-color: #EEEEEE;
+  --overlay-color: rgba(47, 48, 58, 0.4);
+  --social-link-color: #AFB1B8;
+  --basement-social-link-color: rgba(255, 255, 255, 0.1);
+  --face-background: #C4C4C4;
+  --activity-descr-color: rgba(47, 48, 58, 0.8);
+  --modal-background: rgba(0, 0, 0, 0.2);
+  --modal-close-btn: rgba(0, 0, 0, 0.1);
+  --portfolio-overlay-color: rgba(33, 150, 243, 0.9);
+  --transition-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --form-field-border-color: rgba(33, 33, 33, 0.2);
+  --mailing-field-border: rgba(255, 255, 255, 0.3);
+  --mailing-plaseholder-color: rgba(255, 255, 255, 0.6);
+  --submit-button-color: #188CE8;
+}
+
+body {
+  background: var(--main-color);
+  font-family: "Roboto", sans-serif;
+  color: var(--main-text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.header {
+  border-bottom: solid 1px var(--underline-color);
+}
+.header__container {
+  margin: 0px auto;
+  width: 1200px;
+  padding: 0px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}/*# sourceMappingURL=main.css.map */
