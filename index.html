@@ -13,14 +13,13 @@
         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/main.min.css">
-    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <!-- Navigation_bar -->
     <header class="header">
         <div class="header__container">
             <nav class="main-nav">
-                <a class="logo" href="/">Web<span class="logo--black">Studio</span></a>
+                <a class="main-nav__logo" href="/">Web<span class="main-nav__logo--black">Studio</span></a>
                 <ul class="main-nav__list">
                     <li><a class="main-nav__link--current" href="./index.html">Студія</a></li>
                     <li><a class="main-nav__link" href="./portfolio.html">Портфоліо</a></li>
@@ -51,7 +50,7 @@
         <!-- Hero -->
         <section class="hero">
             <div class="hero__container">
-                <h1 class="hero__header">Ефективні рішення для вашого бізнесу</h1>
+                <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
                 <button data-modal-open class="order-button" type="button">Замовити послугу</button>
             </div>
         </section>
@@ -395,54 +394,55 @@
     <div data-modal class="backdrop is-hidden">
         <div class="modal">
             <button data-modal-close class="close-btn" type="button">
-                <svg class="close-btn-icon" width="11" height="11">
+                <svg class="close-btn_icon" width="11" height="11">
                     <use href="./images/icons.svg#close-btn"></use>
                 </svg>
             </button>
-            <strong class="modal-title">Залиште свої дані, ми вам передзвонимо</strong>
-            <form name="back-call-form" autocomplete="on">
-                <ul class="list form-list">
-                    <li class="field-item">
-                        <label class="form-label" for="name">Ім'я</label>
-                        <div class="form-wrapper">
-                            <input class="form-field" type="text" id="name" required>
-                            <svg width="12" height="12" class="form-icon">
+            <strong class="modal_title">Залиште свої дані, ми вам передзвонимо</strong>
+            <form class="form" autocomplete="on">
+                <ul class="form_list">
+                    <li class="form_item">
+                        <label class="form_label" for="name">Ім'я</label>
+                        <div class="form_wrapper">
+                            <input class="form_field" type="text" id="name" required>
+                            <svg width="12" height="12" class="form_icon">
                                 <use href="./images/icons.svg#user-icon"></use>
                             </svg>
                         </div>
                     </li>
-                    <li class="field-item">
-                        <label class="form-label" for="tel">Телефон</label>
-                        <div class="form-wrapper">
-                            <input class="form-field" type="tel" id="tel" required>
-                            <svg width="13" height="13" class="form-icon">
+                    <li class="form_item">
+                        <label class="form_label" for="tel">Телефон</label>
+                        <div class="form_wrapper">
+                            <input class="form_field" type="tel" id="tel" required>
+                            <svg width="13" height="13" class="form_icon">
                                 <use href="./images/icons.svg#tel-form-icon"></use>
                             </svg>
                         </div>
                     </li>
-                    <li class="field-item">
-                        <label class="form-label" for="email">Пошта</label>
-                        <div class="form-wrapper">
-                            <input class="form-field" type="email" id="email">
-                            <svg width="15" height="12" class="form-icon">
+                    <li class="form_item">
+                        <label class="form_label" for="email">Пошта</label>
+                        <div class="form_wrapper">
+                            <input class="form_field" type="email" id="email">
+                            <svg width="15" height="12" class="form_icon">
                                 <use href="./images/icons.svg#envelope-form-icon"></use>
                             </svg>
                         </div>
                     </li>
                     <li>
-                        <label class="form-label" for="comment">Коментар</label>
-                            <textarea class="form-field comment-field" name="comment" id="comment" placeholder="Введіть текст"></textarea>
+                        <label class="form_label" for="comment">Коментар</label>
+                        <textarea class="form_field comment-field" name="comment" id="comment"
+                            placeholder="Введіть текст"></textarea>
                     </li>
                 </ul>
-                <div class="checkbox-wrapper">
-                    <label class="checkbox-label">
-                        <input class="form-checkbox" type="checkbox">
-                        <svg class="form-checkbox-icon" width="16" height="15">
-                            <use class="uncheck" href="./images/icons.svg#icon-uncheck"></use>
-                            <use class="check" href="./images/icons.svg#icon-check"></use>
+                <div class="form_checkbox-wrapper">
+                    <label class="form_checkbox_label">
+                        <input class="form_checkbox" type="checkbox">
+                        <svg class="form_checkbox-icon" width="16" height="15">
+                            <use class="form_checkbox--uncheck" href="./images/icons.svg#icon-uncheck"></use>
+                            <use class="form_checkbox--check" href="./images/icons.svg#icon-check"></use>
                         </svg>
-                        <span class="checkbox-descr">Погоджуюся з розсилкою та приймаю
-                            <a href="./" class="terms-link">Умови договору</a>
+                        <span class="form_checkbox-descr">Погоджуюся з розсилкою та приймаю
+                            <a href="./" class="form_terms-link">Умови договору</a>
                         </span>
                     </label>
                     <button class="submit-button" type="submit">Відправити</button>
