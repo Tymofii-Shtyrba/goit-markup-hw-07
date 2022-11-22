@@ -57,7 +57,7 @@ ul {
   margin: 0px;
 }
 
-.features__title--visually-hidden {
+.portfolio__title--visually-hidden, .features__title--visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -941,23 +941,23 @@ ul {
 .portfolio {
   padding: 94px 0px;
 }
-
-.portfolio__title--visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.portfolio__container {
+  margin: 0px auto;
+  width: 1200px;
+  padding: 0px 15px;
 }
 
-/*Filters*/
-.filt-but {
+.filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+  gap: 8px;
+}
+.filters__button {
   cursor: pointer;
   background: var(--team-section-color);
   font-family: inherit;
@@ -975,41 +975,20 @@ ul {
   transition: background 250ms var(--transition-function), box-shadow 250ms var(--transition-function), color 250ms var(--transition-function), -webkit-box-shadow 250ms var(--transition-function);
 }
 
-.filt-but:hover,
-.filt-but:focus {
+.filters__button:focus {
+  background: var(--first-logo-color);
+  color: var(--main-color);
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.filters__button:hover {
   background: var(--first-logo-color);
   color: var(--main-color);
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.filters h2,
-.projects h2 {
-  color: var(--main-color);
-}
-
-/*Projects*/
-.projects-container {
-  margin: 0px auto;
-  width: 1200px;
-  padding: 0px 15px;
-}
-
-.filters-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
-}
-
-.button:not(:last-child) {
-  margin-right: 8px;
-}
-
-.projects-list {
+.portfolio__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1018,27 +997,27 @@ ul {
   gap: 30px;
 }
 
-.project-item {
+.portfolio-item {
   -webkit-transition: -webkit-box-shadow 250ms var(--transition-function);
   transition: -webkit-box-shadow 250ms var(--transition-function);
   transition: box-shadow 250ms var(--transition-function);
   transition: box-shadow 250ms var(--transition-function), -webkit-box-shadow 250ms var(--transition-function);
 }
-
-.project-item:hover,
-.project-item:focus {
+.portfolio-item:hover {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-
-.description-box {
+.portfolio-item:focus {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.portfolio-item__description-box {
   padding: 20px 24px;
   border-right: solid 1px var(--border-color);
   border-bottom: solid 1px var(--border-color);
   border-left: solid 1px var(--border-color);
 }
-
-.project-title {
+.portfolio-item__title {
   color: var(--main-text-color);
   font-weight: 700;
   font-size: 18px;
@@ -1046,20 +1025,17 @@ ul {
   letter-spacing: 0.06em;
   margin-bottom: 4px;
 }
-
-.project-descr {
+.portfolio-item__descr {
   color: var(--descriprion-color);
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
 }
-
-.item-wrapper {
+.portfolio-item__wrapper {
   position: relative;
   overflow: hidden;
 }
-
-.item-overlay {
+.portfolio-item__overlay {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -1075,9 +1051,11 @@ ul {
   transition: transform 250ms var(--transition-function);
   transition: transform 250ms var(--transition-function), -webkit-transform 250ms var(--transition-function);
 }
-
-.project-item:hover .item-overlay,
-.project-item:focus .item-overlay {
+.portfolio-item:hover .portfolio-item__overlay {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+.portfolio-item:focus .portfolio-item__overlay {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
 }/*# sourceMappingURL=main.css.map */
